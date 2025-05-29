@@ -9,6 +9,7 @@ import time
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 
+
 '''1. Launching the chrome browser'''
 options = webdriver.ChromeOptions()
 options.add_argument("start-maximized")
@@ -23,19 +24,11 @@ driver.get('https://testautomationpractice.blogspot.com/')
 '''3. Creating an object from ActionChains class'''
 actions = ActionChains(driver)
 
+'''4. Capital letter - Name'''
+name_txt_bx = driver.find_element(By.ID, 'name')
+#name_txt_bx.send_keys("chitra")
+actions.key_down(Keys.SHIFT,name_txt_bx).send_keys("chitra").key_up(Keys.SHIFT).perform()
 
-'''4. Copy text from field1 (cmd+ a) and (cmd+ c)'''
-
-field1_txt_bx = driver.find_element(By.XPATH, '//*[@id="field1"]')
-actions.key_down(Keys.COMMAND, field1_txt_bx).send_keys('a').key_up(Keys.COMMAND).perform()
-
-actions.key_down(Keys.COMMAND).send_keys('c').key_up(Keys.COMMAND).perform()
-
-
-'''5. Pasting the text in field2 (cmd+v)'''
-
-field2_txt_bx = driver.find_element(By.XPATH, '//*[@id="field2"]')
-actions.key_down(Keys.COMMAND, field2_txt_bx).send_keys('v').key_up(Keys.COMMAND).perform()
 
 
 
