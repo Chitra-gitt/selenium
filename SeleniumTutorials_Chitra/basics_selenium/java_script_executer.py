@@ -26,3 +26,4 @@ driver.execute_script('document.getElementById("txtDate").removeAttribute("reado
 date_picker_2 = driver.find_element(By.ID, 'txtDate')
 date_picker_2.send_keys("03/06/2025")
 
+
