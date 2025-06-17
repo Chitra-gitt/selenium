@@ -48,7 +48,7 @@ class OrangeHRMLoginTest(unittest.TestCase):
 
         driver.get('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
 
-        ''' 3. Enter usename'''
+        ''' 3. Enter username'''
                 
         username_txtbox = driver.find_element(By.XPATH,'//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input')
         username_txtbox.send_keys("Admin")
